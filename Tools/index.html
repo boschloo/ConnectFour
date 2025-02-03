@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Four</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <h2 class="game-title">&nbsp;&nbsp;CONNECT-FOUR</h2>
+        
+        <!-- Game Board Section -->
+        <section class="game-section">
+            <div id="board-container">
+                <div id="row-labels"></div>
+                <div class="board-wrapper">
+                    <div id="board"></div>
+                    <div id="col-labels"></div> <!-- Moved below board -->
+                </div>
+            </div>
+            
+            <!-- Game Controls -->
+            <div class="game-controls">
+                <div class="move-input-group">
+                    <label id="moveInputLbl" for="moveInput">Move:</label>
+                    <input id="moveInput" type="text" placeholder="Enter column (A-G or - for undo)">
+                </div>
+                <div id="playerTurn" class="player-turn"></div>
+            </div>
+            
+            <!-- Game Note -->
+            <textarea id="gameNote" placeholder="Write a note about this game..." rows="3"></textarea>
+            <div id="winMessage" class="win-message"></div>
+        </section>
+
+        <!-- Control Buttons Section -->
+        <section class="controls-section">
+            <div id="controls">
+                <!-- Primary Game Controls -->
+                <div class="primary-controls">
+                    <button id="clearBtn">Reset game</button>
+                    <button id="simulateBtn">Simulate</button>
+                </div>
+
+                <!-- Save/Load Controls -->
+                <div class="save-controls">
+                    <div class="file-input-group">
+                        <input id="fileNameInput" type="text" placeholder="File name">
+                        <input id="fileInput" type="file" accept=".json" class="hidden">
+                    </div>
+                    <div class="save-buttons">
+                        <button id="importBtn">Import</button>
+                        <button id="exportBtn">Save</button>
+                        <button id="toggleMoveNumbersBtn">Toggle Numbers</button>
+                    </div>
+                </div>
+
+                <!-- Threat Analysis Controls -->
+                <div class="threat-controls">
+                    <button id="showThreatsWhiteBtn">Red's Threats</button>
+                    <button id="showThreatsBlackBtn">Black's Threats</button>
+                    <button id="clearThreatsBtn">Clear Threats</button>
+                    <button id="exportLogicBtn">Export Logic</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game State Section -->
+        <section class="game-state-section">
+            <div id="loadGameState">
+                <label for="gameStateInput">Paste Game State:</label>
+                <textarea id="gameStateInput" placeholder="Paste your game state here..." rows="10"></textarea>
+                <button id="applyGameStateBtn">Apply Game State</button>
+            </div>
+
+            <div id="textSchemeContainer">
+                <label for="gameTextScheme">Game Text Scheme:</label>
+                <textarea id="gameTextScheme" rows="7" readonly></textarea>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
