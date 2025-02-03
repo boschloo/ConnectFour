@@ -1,8 +1,5 @@
-
 % c4_v415d_las.lp
-% Variatie op v415c (zoektijd 8110 sec)
 % Met minimale searchspace
-% Hoeveel gaat dit sneller?? --->> 5 seconden totaal nu!.
 
 role(1). role(2).
 
