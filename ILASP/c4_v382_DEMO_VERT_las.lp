@@ -46,6 +46,13 @@ cell(1,2,1). cell(2,2,0). cell(3,2,0). cell(4,2,1). cell(5,2,0). cell(6,2,2). ce
 cell(1,1,1). cell(2,1,0). cell(3,1,1). cell(4,1,0). cell(5,1,0). cell(6,1,2). cell(7,1,0).   
 }).
 
+% . 2 . . . . .
+% . 2 . 1 1 . 2
+% 1 2 1 . 1 2 2
+% 1 2 1 1 1 . 2
+% 1 . . 1 . 2 2
+% 1 . 1 . . 2 .
+
 % (base) ~/c4 % ilasp --version=2i c4_v382_las.lp -ml=4 --max-rule-length=5
 % vert(V1,V2,V3) :- cell(V1,V2,V3); cell(V1,V2+1,V3); cell(V1,V2+2,V3); cell(V1,V2+3,V3).
 
