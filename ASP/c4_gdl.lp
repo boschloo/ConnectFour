@@ -51,8 +51,6 @@ terminal :- line(P).
 terminal :- not open.
 
 % Additional concepts --------------------------------------------------------
-% De onderste lege cel in de x-kolom van de drop krijgt de kleur van de speler.
-target(X,Y,P) :- does(P, drop(X)), true(cell(X,Y,0)), not true(cell(X,Y-1,0)).
 open(X) :- true(cell(X, N, 0)), board_size(M, N).
 open :- open(X).
  
