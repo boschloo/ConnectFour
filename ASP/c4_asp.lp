@@ -11,7 +11,8 @@ role(1). role(2).
 init(cell(X, Y, 0)) :- col(X), row(Y). 
 init(control(1)).
 
-% Game state -------------------------------------------------------------------true(cell(X, Y, P)) :- init(cell(X,Y,P)). 
+% Game state -------------------------------------------------------------------
+true(cell(X, Y, P)) :- init(cell(X,Y,P)). 
 true(control(P)) :- init(control(P)). 
 
 % Game state update  --------------------------------------------------------- 
