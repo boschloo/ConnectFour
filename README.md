@@ -1,2 +1,2 @@
 # ConnectFour
-Overzicht van alle gebruikte bestanden voor het leren van Vier op een rij met behulp van ILASP.
+All files used in learning the rules of Connect Four using ILASP
