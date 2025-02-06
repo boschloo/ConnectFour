@@ -1,15 +1,56 @@
-% c4_gdl.lp
+% c4_asp.lp
 % ASP-code for playing Connect Four.
 % Version to be used in the learning process
-% cell()) -> cell() true(cell(_ -> cell() next(cell()) -> next() true(control()) -> control()
+% c4_test_v109
 
-% Background knowledge -------------------------------------------------------
+% Test 9: legal/2  =====================================================================
+
+% Situation: six columns available, player 2's turn.
+
+% . . . . . 2 .
+% . . . 2 . 1 .
+% . . . 1 . 2 1
+% . . 2 2 . 2 2
+% . 1 1 1 . 1 1
+% 1 2 2 1 . 2 1
+
+cell(1,6,0). cell(2,6,0). cell(3,6,0). cell(4,6,0). cell(5,6,0). cell(6,6,2). cell(7,6,0).
+cell(1,5,0). cell(2,5,0). cell(3,5,0). cell(4,5,2). cell(5,5,0). cell(6,5,1). cell(7,5,0).
+cell(1,4,0). cell(2,4,0). cell(3,4,0). cell(4,4,1). cell(5,4,0). cell(6,4,2). cell(7,4,1).
+cell(1,3,0). cell(2,3,0). cell(3,3,2). cell(4,3,2). cell(5,3,0). cell(6,3,2). cell(7,3,2).
+cell(1,2,0). cell(2,2,1). cell(3,2,1). cell(4,2,1). cell(5,2,0). cell(6,2,1). cell(7,2,1).
+cell(1,1,1). cell(2,1,2). cell(3,1,2). cell(4,1,1). cell(5,1,0). cell(6,1,2). cell(7,1,1).
+control(2).
+
+#show legal/2.
+
+% Expected: 
+% legal(2, drop(1..7)) except for drop(6)).
+
+% Result:
+% Answer: 1
+% legal(2,drop(1)) legal(2,drop(2)) legal(2,drop(3)) legal(2,drop(4)) legal(2,drop(5)) legal(2,drop(7))
+% ... (6 answer sets)
+% SATISFIABLE
+
+% Evaluation: ok
+
+% ================================================================================
+
 board_size(7,6).
 col(X) :- X = 1..M, board_size(M,N).
 row(Y) :- Y = 1..N, board_size(M,N).
 
 % Roles / players-------------------------------------------------------------
 role(1). role(2).
+
+% Initial state --------------------------------------------------------------
+init(X,Y,0) :- col(X), row(Y). 
+init(control(1)).
+
+% % Game state on the first move:---------------------------------------------------
+% cell(X,Y,P) :- init(X,Y,P). 
+% control(P) :- init(control(P)). 
 
 % Legal moves: Actions --------------------------------------------------------------
 legal(P, drop(X)) :- control(P), open(X).
@@ -36,7 +77,7 @@ terminal :- line(P).
 terminal :- not open.
 
 % Additional concepts --------------------------------------------------------
-open(X) :- cell(X, N, 0), board_size(M, N).
+open(X) :- cell(X,N,0), board_size(M,N).
 open :- open(X).
  
 horz(X,Y,P) :- cell(X,Y,P),cell(X+1,Y,P),cell(X+2,Y,P),cell(X+3,Y,P),role(P).
@@ -48,3 +89,5 @@ line(P) :- horz(X,Y,P).
 line(P) :- vert(X,Y,P). 
 line(P) :- dia1(X,Y,P). 
 line(P) :- dia2(X,Y,P).
+
+% ================================================================================
