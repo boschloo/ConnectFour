@@ -28,7 +28,7 @@ control(2).
 
 % Expected: 
 % open
-% open(1)..open(7), maar niet open(6).
+% open(1)..open(7), however, not open(6).
 
 % Result:
 % Answer: 1

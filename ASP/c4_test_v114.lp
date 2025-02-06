@@ -28,7 +28,7 @@ does(2,drop(2)).
 % Expected: 
 % Expected game state ..
 
-% Resultaat:
+% Result:
 % Answer: 1
 % next(1,6,0) next(2,6,0) next(3,6,0) next(4,6,0) next(5,6,0) next(6,6,2) next(7,6,0) 
 % next(1,5,0) next(2,5,0) next(3,5,0) next(4,5,2) next(5,5,0) next(6,5,1) next(7,5,0) 
