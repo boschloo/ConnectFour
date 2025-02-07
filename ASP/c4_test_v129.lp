@@ -1,10 +1,10 @@
 % c4_asp.lp
 % ASP-code for playing Connect Four.
 % Version to be used in the learning process
+% Initial state / game state on the first move removed, game state given in scenario.
 % c4_test_v129
 
 % Test 29 goal/2  terminal (line) ======================================================
-
 % Scenario: Game board with possible lines
 
 % . . . 2 1 . 1
@@ -25,6 +25,9 @@ control(1).
 #show open/0.
 #show line/1.
 #show horz/3.
+#show vert/3.
+#show dia1/3.
+#show dia2/3.
 #show terminal/0.
 #show goal/2.
 
@@ -33,7 +36,7 @@ control(1).
 
 % Result:
 % Answer: 1
-% open terminal line(2) goal(2,100) goal(1,0)
+% open terminal line(2) goal(2,100) goal(1,0) dia1(1,3,2) dia2(3,5,2)
 % SATISFIABLE
 
 % Evaluation: ok
@@ -46,14 +49,6 @@ row(Y) :- Y = 1..N, board_size(M,N).
 
 % Roles / players-------------------------------------------------------------
 role(1). role(2).
-
-% Initial state --------------------------------------------------------------
-init(X,Y,0) :- col(X), row(Y). 
-init(control(1)).
-
-% % Game state on the first move:---------------------------------------------------
-% cell(X,Y,P) :- init(X,Y,P). 
-% control(P) :- init(control(P)). 
 
 % Legal moves: Actions --------------------------------------------------------------
 legal(P, drop(X)) :- control(P), open(X).

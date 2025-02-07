@@ -4,8 +4,7 @@
 % c4_test_v104
 
 % Test 4: cell/3, control/1  ======================================================
-
-% Situation: Start of the game. Testing Game state on the first move.
+% Scenario: Start of the game. Testing Game state on the first move.
 
 #show cell/3.
 #show control/1.

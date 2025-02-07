@@ -4,8 +4,7 @@
 % c4_test_v102
 
 % Test 2: Background  =========================================================
-
-% Situation: background facts 
+% Scenario: background facts 
 
 #show col/1.
 #show row/1.

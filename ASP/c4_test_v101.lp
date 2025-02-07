@@ -4,8 +4,7 @@
 % c4_test_v101
 
 % Test 1: board_size ==========================================================
-
-% Situation: Initial, background facts
+% Scenario: Initial, background facts
 
 #show board_size/2.
 

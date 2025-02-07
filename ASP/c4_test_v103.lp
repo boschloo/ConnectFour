@@ -4,8 +4,7 @@
 % c4_test_v103
 
 % Test 3: Initial situation  =======================================================
-
-% Situation: Start of the game.
+% Scenario: Start of the game.
 
 #show init/3.
 #show init/1.

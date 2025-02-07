@@ -1,6 +1,7 @@
 % c4_gdl.lp
 % ASP-code for playing Connect Four.
 % Version according to GDL-standards
+%
 
 % Background knowledge -------------------------------------------------------
 board_size(7,6).

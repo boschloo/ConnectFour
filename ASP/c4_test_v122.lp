@@ -1,11 +1,11 @@
 % c4_asp.lp
 % ASP-code for playing Connect Four.
 % Version to be used in the learning process
+% Initial state / game state on the first move removed, game state given in scenario.
 % c4_test_v122
 
 % Test 22 ========================================================
-
-% Situation: Continuation from test 9. Player 2's turn. Testing next/1, next/3.
+% Scenario: Continuation from test 9. Player 2's turn. Testing next/1, next/3.
 
 % . . . . . 2 .
 % . . . 2 . 1 .
@@ -138,14 +138,6 @@ row(Y) :- Y = 1..N, board_size(M,N).
 
 % Roles / players-------------------------------------------------------------
 role(1). role(2).
-
-% Initial state --------------------------------------------------------------
-init(X,Y,0) :- col(X), row(Y). 
-init(control(1)).
-
-% % Game state on the first move:---------------------------------------------------
-% cell(X,Y,P) :- init(X,Y,P). 
-% control(P) :- init(control(P)). 
 
 % Legal moves: Actions --------------------------------------------------------------
 legal(P, drop(X)) :- control(P), open(X).
