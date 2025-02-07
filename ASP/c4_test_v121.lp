@@ -46,7 +46,7 @@ control(2).
 % The target predicate is defined so that each possible drop produces a different
 % target, i.e. the cell(X,Y) that changes 'color'(P).
 
-% ================================================================================
+% ======= P R O G R A M =======================================================
 
 board_size(7,6).
 col(X) :- X = 1..M, board_size(M,N).

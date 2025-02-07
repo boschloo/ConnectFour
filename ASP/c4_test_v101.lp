@@ -33,7 +33,7 @@
 % Because of the choice possibility in Action selection, there are 7 answers / answer sets.
 % In the following tests, just one set is shown
 
-% ================================================================================
+% ======= P R O G R A M =======================================================
 
 board_size(7,6).
 col(X) :- X = 1..M, board_size(M,N).

@@ -48,7 +48,7 @@ control(1).
 % Evaluation ok
 % Not yet a line because this line is still in next. Not yet terminal.
 
-% ================================================================================
+% ======= P R O G R A M =======================================================
 
 board_size(7,6).
 col(X) :- X = 1..M, board_size(M,N).
