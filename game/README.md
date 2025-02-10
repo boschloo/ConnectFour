@@ -12,7 +12,7 @@ The web app consists of an index.html file, with css styling and a Javascript pr
 - _Import_ loads a game from disc.
 - You can give a game a name and save it to disc. With no name entered, a default name is used. Previous versions are not overwritten. 
 - Move numbers (ply numbers really) are shown but can be hidden.
-- There are butttons to show and hide threats from both players.
+- There are buttons to show and hide threats from both players.
 
 - To export a game state _Export Logic_ is used. The format is specific for use in ILASP.
 - The other way round, you can paste ILASP output (cell/3, next/3) in the _Past Game State_ window. On clicking Apply, the board becomes visible and the Game Text Schema below is being updated.

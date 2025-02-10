@@ -2,6 +2,8 @@
 
 The collection of input files for ILASP to learn the program of Connect Four. All files are valid ILASP input files. The output is added at the bottom of the file as commented text. When game states are given, a game text scheme is added as a clarification.
 
+The resulting file is c4\_learned\_with\_ilasp\_las.lp. It is possible add test scenarios at the end, to test the validity of the rules learned. Test scenarios from the ASP directory can be used without any problems.
+
 
 | filename | learned | 
 |----------|---------|
@@ -18,3 +20,4 @@ The collection of input files for ILASP to learn the program of Connect Four. Al
 |  c4\_target\_las.lp |  | 
 |  c4\_terminal\_las.lp |  |
 |  c4\_vert\_las.lp |  |
+|  c4\_learned\_with\_ilasp\_las.lp | combines the background with learned rules from all previous files |
