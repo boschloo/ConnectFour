@@ -1,7 +1,6 @@
 % c4_asp.lp
 % ASP-code for playing Connect Four.
 % Version to be used in the learning process
-% Initial state / game state on the first move removed, game state given in scenario.
 % c4_test_v110
 
 % Test 10: legal/2  =====================================================================
@@ -23,13 +22,14 @@ cell(1,1,2). cell(2,1,2). cell(3,1,2). cell(4,1,1). cell(5,1,2). cell(6,1,2). ce
 control(1).
 
 #show legal/2.
+#show terminal/0.
 
 % Expected: 
 % no legal moves
 
 % Result:
 % Answer: 1
-
+% terminal
 % SATISFIABLE
 
 % Evaluation: ok

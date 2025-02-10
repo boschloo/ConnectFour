@@ -1,5 +1,5 @@
 % c4_v422_las.lp
-% Learning the targets
+% Learning legal moves
 % ASP-code for playing Connect Four.
 % Version to be used in the learning process
 

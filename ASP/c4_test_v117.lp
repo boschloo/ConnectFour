@@ -23,13 +23,14 @@ cell(1,1,0). cell(2,1,1). cell(3,1,2). cell(4,1,1). cell(5,1,1). cell(6,1,2). ce
 #show line/1.
 #show horz/3.
 #show vert/3.
+#show terminal/0.
 
 % Expected: 
-% line(1) vert(4,4,1)
+% terminal line(1) vert(4,4,1)
 
 % Result:
 % Answer: 1
-% line(1) vert(4,1,1)
+% terminal line(1) vert(4,1,1)
 % SATISFIABLE
 
 % Evaluation: ok
