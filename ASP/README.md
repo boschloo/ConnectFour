@@ -11,8 +11,8 @@ File ASP/c4_asp.lp. In this version, the parts for Initial state and Game state 
 The test files in the directory ASP show tests on different aspects of the program. These files are all ready to run with clingo. The test scenarios are in the first part of the file, the rest of the program is added at the end. In testing the program, a number of mistakes were found and resolved in the original program, in particular concerning the terminal/0 predicate.
 
 
-| filename | tested| | scenario |
-|----------|---------|----------|
+| filename | tested | scenario |
+|----------|--------|----------|
 | c4_test_v101.lp | board_size/2. | Initial |
 | c4_test_v102.lp | col/1, row/1, role/1. | Initial |
 | c4_test_v103.lp | init/1, init/3. |Initial || 
