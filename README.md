@@ -7,4 +7,6 @@ The directory ASP contains the Connect Four program as written at the beginning 
 
 The directory ILASP contains the files used with ILASP to learn the rule of Connect Four. 
 
-A README.md file in each directory explains the scenarios tested and learned.
+The directory game containts a web app to be used as a tool for playing Connect Four and generating test scenarios. 
+
+A README.md file in each directory gives more context.
