@@ -67,6 +67,13 @@ cell(1,2,0). cell(2,2,0). cell(3,2,0). cell(4,2,0). cell(5,2,0). cell(6,2,0). ce
 cell(1,1,0). cell(2,1,0). cell(3,1,0). cell(4,1,0). cell(5,1,0). cell(6,1,0). cell(7,1,0).
 control(1).}).
 
+% . . . . . . .
+% . . . . . . .
+% . . . . . . .
+% . . . . . . .
+% . . . . . . .
+% . . . . . . .
+
 #pos({terminal},{},{
 cell(1,6,1). cell(2,6,1). cell(3,6,1). cell(4,6,2). cell(5,6,1). cell(6,6,1). cell(7,6,1).
 cell(1,5,2). cell(2,5,2). cell(3,5,2). cell(4,5,1). cell(5,5,2). cell(6,5,2). cell(7,5,2).
@@ -75,6 +82,13 @@ cell(1,3,2). cell(2,3,2). cell(3,3,2). cell(4,3,1). cell(5,3,2). cell(6,3,2). ce
 cell(1,2,1). cell(2,2,1). cell(3,2,1). cell(4,2,2). cell(5,2,1). cell(6,2,1). cell(7,2,1).
 cell(1,1,2). cell(2,1,2). cell(3,1,2). cell(4,1,1). cell(5,1,2). cell(6,1,2). cell(7,1,2).
 control(1).}).
+
+% 1 1 1 2 1 1 1
+% 2 2 2 1 2 2 2
+% 1 1 1 2 1 1 1
+% 2 2 2 1 2 2 2
+% 1 1 1 2 1 1 1
+% 2 2 2 1 2 2 2
 
 #pos({},{terminal},{
 cell(1,6,0). cell(2,6,1). cell(3,6,0). cell(4,6,0). cell(5,6,0). cell(6,6,0). cell(7,6,0).
@@ -85,6 +99,13 @@ cell(1,2,0). cell(2,2,2). cell(3,2,2). cell(4,2,2). cell(5,2,1). cell(6,2,1). ce
 cell(1,1,1). cell(2,1,1). cell(3,1,1). cell(4,1,2). cell(5,1,1). cell(6,1,1). cell(7,1,2).
 control(2).}).
 
+% . 1 . . . . .
+% . 2 . . 1 . .
+% . 1 . 1 2 . 2
+% . 2 2 2 1 . 2
+% . 2 2 2 1 1 1
+% 1 1 1 2 1 1 2
+
 #pos({terminal},{},{
 cell(1,6,0). cell(2,6,1). cell(3,6,0). cell(4,6,0). cell(5,6,0). cell(6,6,0). cell(7,6,0).
 cell(1,5,0). cell(2,5,2). cell(3,5,0). cell(4,5,0). cell(5,5,1). cell(6,5,0). cell(7,5,0).
@@ -93,6 +114,13 @@ cell(1,3,0). cell(2,3,2). cell(3,3,2). cell(4,3,2). cell(5,3,1). cell(6,3,0). ce
 cell(1,2,2). cell(2,2,2). cell(3,2,2). cell(4,2,2). cell(5,2,1). cell(6,2,1). cell(7,2,1).
 cell(1,1,1). cell(2,1,1). cell(3,1,1). cell(4,1,2). cell(5,1,1). cell(6,1,1). cell(7,1,2).
 control(1).}).
+
+% . 1 . . . . .
+% . 2 . . 1 . .
+% . 1 . 1 2 . 2
+% . 2 2 2 1 . 2
+% 2 2 2 2 1 1 1
+% 1 1 1 2 1 1 2
 
 
 % (base) ~/connectfour/ILASP % ilasp --version=2i c4_v428_las.lp

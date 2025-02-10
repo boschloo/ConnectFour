@@ -34,6 +34,13 @@ cell(1,2,0). cell(2,2,1). cell(3,2,1). cell(4,2,1). cell(5,2,0). cell(6,2,1). ce
 cell(1,1,1). cell(2,1,2). cell(3,1,2). cell(4,1,1). cell(5,1,0). cell(6,1,2). cell(7,1,1).
 }).
 
+% . . . . . 2 .
+% . . . 2 . 1 .
+% . . . 1 . 2 1
+% . . 2 2 . 2 2
+% . 1 1 1 . 1 1
+% 1 2 2 1 . 2 1
+
 #pos({},{open, open(1), open(2), open(3), open(4), open(5), open(6), open(7)},{
 cell(1,6,1). cell(2,6,1). cell(3,6,1). cell(4,6,2). cell(5,6,1). cell(6,6,1). cell(7,6,1).
 cell(1,5,2). cell(2,5,2). cell(3,5,2). cell(4,5,1). cell(5,5,2). cell(6,5,2). cell(7,5,2).
@@ -41,6 +48,13 @@ cell(1,4,1). cell(2,4,1). cell(3,4,1). cell(4,4,2). cell(5,4,1). cell(6,4,1). ce
 cell(1,3,2). cell(2,3,2). cell(3,3,2). cell(4,3,1). cell(5,3,2). cell(6,3,2). cell(7,3,2).
 cell(1,2,1). cell(2,2,1). cell(3,2,1). cell(4,2,2). cell(5,2,1). cell(6,2,1). cell(7,2,1).
 cell(1,1,2). cell(2,1,2). cell(3,1,2). cell(4,1,1). cell(5,1,2). cell(6,1,2). cell(7,1,2).}).
+
+% 1 1 1 2 1 1 1
+% 2 2 2 1 2 2 2
+% 1 1 1 2 1 1 1
+% 2 2 2 1 2 2 2
+% 1 1 1 2 1 1 1
+% 2 2 2 1 2 2 2
 
 % open :- cell(V1,V2,V3); not role(V3).
 % open(V1) :- cell(V1,V2,V3); not role(V3).

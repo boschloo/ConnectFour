@@ -20,6 +20,13 @@ cell(1,2,0). cell(2,2,1). cell(3,2,1). cell(4,2,1). cell(5,2,0). cell(6,2,1). ce
 cell(1,1,1). cell(2,1,2). cell(3,1,2). cell(4,1,1). cell(5,1,0). cell(6,1,2). cell(7,1,1).
 control(2).
 
+% . . . . . 2 .
+% . . . 2 . 1 .
+% . . . 1 . 2 1
+% . . 2 2 . 2 2
+% . 1 1 1 . 1 1
+% 1 2 2 1 . 2 1
+
 % Additional concepts --------------------------------------------------------
 open :- cell(V1,V2,V3); not role(V3).
 open(V1) :- cell(V1,V2,V3); not role(V3).

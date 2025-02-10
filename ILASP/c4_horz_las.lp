@@ -13,14 +13,6 @@ role(1). role(2).
 
 #maxv(3). 
 
-% horz
-% . . 2 . 2 2 .
-% . 2 2 2 2 . .
-% 1 1 1 2 2 2 2
-% . 1 1 . 1 . .
-% . 1 . 1 1 . .
-% . 1 1 1 1 . .
-
 #pos({
     horz(2,1,1), horz(4,4,2), horz(2,5,2)           
 },{
@@ -53,6 +45,13 @@ cell(1,3,0). cell(2,3,1). cell(3,3,1). cell(4,3,0). cell(5,3,1). cell(6,3,0). ce
 cell(1,2,0). cell(2,2,1). cell(3,2,0). cell(4,2,1). cell(5,2,1). cell(6,2,0). cell(7,2,0).
 cell(1,1,0). cell(2,1,1). cell(3,1,1). cell(4,1,1). cell(5,1,1). cell(6,1,0). cell(7,1,0).
 }).
+
+% . . 2 . 2 2 .
+% . 2 2 2 2 . .
+% 1 1 1 2 2 2 2
+% . 1 1 . 1 . .
+% . 1 . 1 1 . .
+% . 1 1 1 1 . .
 
 % (base) ~/c4 % ilasp --version=2i c4_v376_DEMO_HORZ_las.lp -ml=4 --max-rule-length=5   
 % horz(V1,V2,V3) :- cell(V1,V2,V3); cell(V1+1,V2,V3); cell(V1+2,V2,V3); cell(V1+3,V2,V3).
