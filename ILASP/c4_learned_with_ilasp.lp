@@ -34,7 +34,7 @@ terminal :- not open.
 open :- cell(V1,V2,V3); not role(V3).
 open(V1) :- cell(V1,V2,V3); not role(V3).
 
-% Lines ----------------------------------------------------- c4_line_las ------                                                           
+% Lines ---------------------------------------- c4_lines_las, c4_line_las ------                                                           
 horz(V1,V2,V3) :- role(V3); cell(V1,V2,V3); cell(V1+1,V2,V3); cell(V1+2,V2,V3); cell(V1+3,V2,V3).
 vert(V1,V2,V3) :- role(V3); cell(V1,V2,V3); cell(V1,V2+1,V3); cell(V1,V2+2,V3); cell(V1,V2+3,V3).
 dia2(V1,V2,V3) :- role(V3); cell(V1,V2,V3); cell(V1+1,V2-1,V3); cell(V1+2,V2-2,V3); cell(V1+3,V2-3,V3).
