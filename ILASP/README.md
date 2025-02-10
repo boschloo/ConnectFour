@@ -1,7 +1,7 @@
 # ILASP
 
-When game states (cells) are given, a game text scheme is added as a clarification only.
-All files can be used with ILASP without changes. The output is added at the end of the files as commented text.
+When game states (cells) are given, a game text scheme is added as a clarification.
+All files can be used with ILASP without changes. The output is added at the bottom of the files as commented text.
 
 
 | filename | learned | 
