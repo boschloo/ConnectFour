@@ -12,7 +12,7 @@ The test files in the directory ASP show tests on different aspects of the progr
 
 
 | filename | tested| | scenario |
-|---------|---------|----------/
+|----------|---------|----------|
 c4_test_v101.lp | board_size/2. | Initial |
 c4_test_v102.lp | col/1, row/1, role/1. | Initial |
 c4_test_v103.lp | init/1, init/3. |Initial |
