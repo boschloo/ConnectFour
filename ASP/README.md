@@ -13,33 +13,33 @@ The test files in the directory ASP show tests on different aspects of the progr
 
 | filename | tested| | scenario |
 |----------|---------|----------|
-c4_test_v101.lp | board_size/2. | Initial |
-c4_test_v102.lp | col/1, row/1, role/1. | Initial |
-c4_test_v103.lp | init/1, init/3. |Initial |
-c4_test_v104.lp | cell3/, control/1. | Start of the game |
-c4_test_v105.lp | open/0, open/1. | 1 column filled completely, six columns available |
-c4_test_v106.lp | open/0, open/1. | 7 columns filled completely without a winner, end of the game |
-c4_test_v107.lp | open/0, open/1.| Start of the game |
-c4_test_v108.lp | open/0, open/1.| Game board almost full, one move left for player 2 |
-c4_test_v109.lp | legal/2.| 6 columns available, player 2's turn |
-c4_test_v110.lp | legal/2, terminal.| Game board full, no columns available |
-c4_test_v111.lp | legal/2.|  Start of the game |
-c4_test_v112.lp | legal/2.| Board almost full, one column open, player 2's turn |
-c4_test_v113.lp | next/3.| Game state update on different moves. Drop on an empty column |
-c4_test_v114.lp | next/3.| Game state update. Drop on a partially filled column |
-c4_test_v115.lp | next/3.| Game state update. Drop on a column with just one open cell left | 
-c4_test_v116.lp | line/1, horz/3.| Horizontal line of 4 for player 2 |
-c4_test_v117.lp | line/1, horz/3, vert/3.| Vertical line for player 1 |
-c4_test_v118.lp | line/1, horz/3, vert/3.| Horizontal line player 2 |
-c4_test_v119.lp | line/1, horz/3, vert/3, dia/1, dia/2, terminal| Diagonal lines in different directions |
-c4_test_v120.lp | does/1, drop/1, vert/3, terminal/0.| Player 1's turn, first move can give a line. Terminal? |
-c4_test_v121.lp | target/3.| Continuation from test 9. Testing target/3 |
-c4_test_v122.lp | next/1, next/3.| Continuation from test 9. Testing next/1, next/3 |
-c4_test_v123.lp | goal/2.| Testing goal in non terminal scenario |
-c4_test_v124.lp | - not used -| - |
-c4_test_v125.lp | goal/2.| Testing goal at the start of the game |
-c4_test_v126.lp | goal/2, terminal/0.| Game board almost full, one move to make by player 2 |
-c4_test_v127.lp | open/0, line/1, horz/3, vert/3, dia1/3, dia2/3, open/0, goal/2, terminal/0.| Game board full, no columns available, player 1 to go |
-c4_test_v128.lp | open/0, line/1, horz/3, vert/3, dia1/3, dia2/3, open/0, goal/2, terminal/0.| Horizontal line of four for player 2. Goal, terminal |
-c4_test_v129 | open/0, line/1, horz/3, vert/3, dia1/3, dia2/3, open/0, goal/2, terminal/0.| Two diagonal lines for player 2, player 2 wins with 100, open but terminal |
+| c4_test_v101.lp | board_size/2. | Initial |
+| c4_test_v102.lp | col/1, row/1, role/1. | Initial |
+| c4_test_v103.lp | init/1, init/3. |Initial || 
+| c4_test_v104.lp | cell3/, control/1. | Start of the game |
+| c4_test_v105.lp | open/0, open/1. | 1 column filled completely, six columns available |
+| c4_test_v106.lp | open/0, open/1. | 7 columns filled completely without a winner, end of the game |
+| c4_test_v107.lp | open/0, open/1.| Start of the game |
+| c4_test_v108.lp | open/0, open/1.| Game board almost full, one move left for player 2 |
+| c4_test_v109.lp | legal/2.| 6 columns available, player 2's turn |
+| c4_test_v110.lp | legal/2, terminal.| Game board full, no columns available |
+| c4_test_v111.lp | legal/2.|  Start of the game |
+| c4_test_v112.lp | legal/2.| Board almost full, one column open, player 2's turn |
+| c4_test_v113.lp | next/3.| Game state update on different moves. Drop on an empty column |
+| c4_test_v114.lp | next/3.| Game state update. Drop on a partially filled column |
+| c4_test_v115.lp | next/3.| Game state update. Drop on a column with just one open cell left | 
+| c4_test_v116.lp | line/1, horz/3.| Horizontal line of 4 for player 2 |
+| c4_test_v117.lp | line/1, horz/3, vert/3.| Vertical line for player 1 |
+| c4_test_v118.lp | line/1, horz/3, vert/3.| Horizontal line player 2 |
+| c4_test_v119.lp | line/1, horz/3, vert/3, dia/1, dia/2, terminal| Diagonal lines in different directions |
+| c4_test_v120.lp | does/1, drop/1, vert/3, terminal/0.| Player 1's turn, first move can give a line. Terminal? |
+| c4_test_v121.lp | target/3.| Continuation from test 9. Testing target/3 |
+| c4_test_v122.lp | next/1, next/3.| Continuation from test 9. Testing next/1, next/3 |
+| c4_test_v123.lp | goal/2.| Testing goal in non terminal scenario |
+| c4_test_v124.lp | - not used -| - |
+| c4_test_v125.lp | goal/2.| Testing goal at the start of the game |
+| c4_test_v126.lp | goal/2, terminal/0.| Game board almost full, one move to make by player 2 |
+| c4_test_v127.lp | open/0, line/1, horz/3, vert/3, dia1/3, dia2/3, open/0, goal/2, terminal/0.| Game board full, no columns available, player 1 to go |
+| c4_test_v128.lp | open/0, line/1, horz/3, vert/3, dia1/3, dia2/3, open/0, goal/2, terminal/0.| Horizontal line of four for player 2. Goal, terminal |
+| c4_test_v129 | open/0, line/1, horz/3, vert/3, dia1/3, dia2/3, open/0, goal/2, terminal/0.| Two diagonal lines for player 2, player 2 wins with 100, open but terminal |
 
