@@ -20,7 +20,7 @@ true(cell(X, Y, P)) :- init(cell(X,Y,P)).
 true(control(P)) :- init(control(P)). 
 
 % Legal moves: Actions --------------------------------------------------------------
-legal(P, drop(X)) :- true(control(P)), open(X).
+legal(P, drop(X)) :- true(control(P)), open(X), not terminal.
 
 % Moves: Action selection -----------------------------------------------------------
 {does(X, A): legal(X, A)} = 1 :- not terminal. 

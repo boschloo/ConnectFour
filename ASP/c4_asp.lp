@@ -1,9 +1,10 @@
-% c4_gdl.lp
+% c4_asp.lp
 % ASP-code for playing Connect Four.
 % Version to be used in the learning process
-% cell()) -> cell() true(cell(_ -> cell() next(cell()) -> next() true(control()) -> control()
+%
 
-% Background knowledge -------------------------------------------------------
+% ======= P R O G R A M ====== 2025-02-11 ============================================
+
 board_size(7,6).
 col(X) :- X = 1..M, board_size(M,N).
 row(Y) :- Y = 1..N, board_size(M,N).
@@ -12,7 +13,7 @@ row(Y) :- Y = 1..N, board_size(M,N).
 role(1). role(2).
 
 % Legal moves: Actions --------------------------------------------------------------
-legal(P, drop(X)) :- control(P), open(X).
+legal(P, drop(X)) :- control(P), open(X), not terminal.
 
 % Moves: Action selection -----------------------------------------------------------
 {does(X, A): legal(X, A)} = 1 :- not terminal. 
@@ -36,7 +37,7 @@ terminal :- line(P).
 terminal :- not open.
 
 % Additional concepts --------------------------------------------------------
-open(X) :- cell(X, N, 0), board_size(M, N).
+open(X) :- cell(X,N,0), board_size(M,N).
 open :- open(X).
  
 horz(X,Y,P) :- cell(X,Y,P),cell(X+1,Y,P),cell(X+2,Y,P),cell(X+3,Y,P),role(P).
@@ -48,3 +49,5 @@ line(P) :- horz(X,Y,P).
 line(P) :- vert(X,Y,P). 
 line(P) :- dia1(X,Y,P). 
 line(P) :- dia2(X,Y,P).
+
+% ================================================================================
