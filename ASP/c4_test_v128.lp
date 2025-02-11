@@ -30,9 +30,10 @@ control(1).
 #show dia2/3.
 #show terminal/0.
 #show goal/2.
+#show legal/2.
 
 % Expected:
-% Horizontal line on (1,2), player 2 wins with a score of 100, terminal
+% Horizontal line on (1,2), player 2 wins with a score of 100, terminal, no legal moves.
 
 % Result:
 % Answer: 1
@@ -41,7 +42,7 @@ control(1).
 
 % Evaluation: ok
 
-% ======= P R O G R A M =======================================================
+% ======= P R O G R A M ===== 2025-02-11 ============================================
 
 board_size(7,6).
 col(X) :- X = 1..M, board_size(M,N).
@@ -51,7 +52,7 @@ row(Y) :- Y = 1..N, board_size(M,N).
 role(1). role(2).
 
 % Legal moves: Actions --------------------------------------------------------------
-legal(P, drop(X)) :- control(P), open(X).
+legal(P, drop(X)) :- control(P), open(X), not terminal.
 
 % Moves: Action selection -----------------------------------------------------------
 {does(X, A): legal(X, A)} = 1 :- not terminal. 

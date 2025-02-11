@@ -68,7 +68,7 @@ control(1).
 
 % Directives ---------------------------------------------------------------------------
 % #show true/1.
-#show next/1.
+#show next/3.
 % #show option/2.
 % #show target/3.
 % #show horz/3.

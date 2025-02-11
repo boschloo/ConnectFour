@@ -1,38 +1,42 @@
 % c4_asp.lp
 % ASP-code for playing Connect Four.
 % Version to be used in the learning process
-% c4_test_v109
+% c4_test_v124
 
-% Test 9: legal/2  =====================================================================
-% Scenario: six columns available, player 2's turn.
+% Test 24: no legal moves when previous player has won ================================
+% Scenario: 
 
-% . . . . . 2 .
-% . . . 2 . 1 .
-% . . . 1 . 2 1
-% . . 2 2 . 2 2
-% . 1 1 1 . 1 1
-% 1 2 2 1 . 2 1
+% . 1 . . . . .
+% . 2 . . 1 . .
+% . 1 . 1 2 . 2
+% . 2 2 2 1 . 2
+% 2 2 2 2 1 1 1
+% 1 1 1 2 1 1 2
 
-cell(1,6,0). cell(2,6,0). cell(3,6,0). cell(4,6,0). cell(5,6,0). cell(6,6,2). cell(7,6,0).
-cell(1,5,0). cell(2,5,0). cell(3,5,0). cell(4,5,2). cell(5,5,0). cell(6,5,1). cell(7,5,0).
-cell(1,4,0). cell(2,4,0). cell(3,4,0). cell(4,4,1). cell(5,4,0). cell(6,4,2). cell(7,4,1).
-cell(1,3,0). cell(2,3,0). cell(3,3,2). cell(4,3,2). cell(5,3,0). cell(6,3,2). cell(7,3,2).
-cell(1,2,0). cell(2,2,1). cell(3,2,1). cell(4,2,1). cell(5,2,0). cell(6,2,1). cell(7,2,1).
-cell(1,1,1). cell(2,1,2). cell(3,1,2). cell(4,1,1). cell(5,1,0). cell(6,1,2). cell(7,1,1).
-control(2).
+cell(1,6,0). cell(2,6,1). cell(3,6,0). cell(4,6,0). cell(5,6,0). cell(6,6,0). cell(7,6,0).
+cell(1,5,0). cell(2,5,2). cell(3,5,0). cell(4,5,0). cell(5,5,1). cell(6,5,0). cell(7,5,0).
+cell(1,4,0). cell(2,4,1). cell(3,4,0). cell(4,4,1). cell(5,4,2). cell(6,4,0). cell(7,4,2).
+cell(1,3,0). cell(2,3,2). cell(3,3,2). cell(4,3,2). cell(5,3,1). cell(6,3,0). cell(7,3,2).
+cell(1,2,2). cell(2,2,2). cell(3,2,2). cell(4,2,2). cell(5,2,1). cell(6,2,1). cell(7,2,1).
+cell(1,1,1). cell(2,1,1). cell(3,1,1). cell(4,1,2). cell(5,1,1). cell(6,1,1). cell(7,1,2).
+control(1).
 
+#show line/1.
+#show horz/3.
 #show legal/2.
+#show control/1.
+#show terminal/0.
 
 % Expected: 
-% legal(2, drop(1..7)) except for drop(6)).
+% no legal moves for whatever player.
 
 % Result:
 % Answer: 1
-% legal(2,drop(1)) legal(2,drop(2)) legal(2,drop(3)) legal(2,drop(4)) legal(2,drop(5)) legal(2,drop(7))
-% ... (6 answer sets)
+% terminal control(1) line(2) horz(1,2,2)
 % SATISFIABLE
 
-% Evaluation: ok
+% Evaluation: 
+% There should be no legal moves in this scenario.
 
 % ======= P R O G R A M ===== 2025-02-11 ============================================
 

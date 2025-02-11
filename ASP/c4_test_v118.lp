@@ -1,7 +1,6 @@
 % c4_asp.lp
 % ASP-code for playing Connect Four.
 % Version to be used in the learning process
-% Initial state / game state on the first move removed, game state given in scenario.
 % c4_test_v118
 
 % Test 18: line/1, horz/3, vert/3 ========================================================
@@ -20,6 +19,7 @@ cell(1,4,0). cell(2,4,1). cell(3,4,0). cell(4,4,1). cell(5,4,2). cell(6,4,0). ce
 cell(1,3,0). cell(2,3,2). cell(3,3,2). cell(4,3,2). cell(5,3,1). cell(6,3,0). cell(7,3,2).
 cell(1,2,2). cell(2,2,2). cell(3,2,2). cell(4,2,2). cell(5,2,1). cell(6,2,1). cell(7,2,1).
 cell(1,1,1). cell(2,1,1). cell(3,1,1). cell(4,1,2). cell(5,1,1). cell(6,1,1). cell(7,1,2).
+control(1).
 
 #show line/1.
 #show horz/3.
@@ -35,7 +35,7 @@ cell(1,1,1). cell(2,1,1). cell(3,1,1). cell(4,1,2). cell(5,1,1). cell(6,1,1). ce
 
 % Evaluation: ok
 
-% ======= P R O G R A M =======================================================
+% ======= P R O G R A M ===== 2025-02-11 ============================================
 
 board_size(7,6).
 col(X) :- X = 1..M, board_size(M,N).
@@ -45,7 +45,7 @@ row(Y) :- Y = 1..N, board_size(M,N).
 role(1). role(2).
 
 % Legal moves: Actions --------------------------------------------------------------
-legal(P, drop(X)) :- control(P), open(X).
+legal(P, drop(X)) :- control(P), open(X), not terminal.
 
 % Moves: Action selection -----------------------------------------------------------
 {does(X, A): legal(X, A)} = 1 :- not terminal. 

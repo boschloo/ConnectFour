@@ -1,7 +1,6 @@
 % c4_asp.lp
 % ASP-code for playing Connect Four.
 % Version to be used in the learning process
-% Initial state / game state on the first move removed, game state given in scenario.
 % c4_test_v114
 
 % Test 14: does(P,drop(X), next/1.  =====================================================================
@@ -47,7 +46,7 @@ does(2,drop(2)).
 
 % Evaluatie: ok
 
-% ======= P R O G R A M =======================================================
+% ======= P R O G R A M ===== 2025-02-11 ============================================
 
 board_size(7,6).
 col(X) :- X = 1..M, board_size(M,N).
@@ -57,7 +56,7 @@ row(Y) :- Y = 1..N, board_size(M,N).
 role(1). role(2).
 
 % Legal moves: Actions --------------------------------------------------------------
-legal(P, drop(X)) :- control(P), open(X).
+legal(P, drop(X)) :- control(P), open(X), not terminal.
 
 % Moves: Action selection -----------------------------------------------------------
 {does(X, A): legal(X, A)} = 1 :- not terminal. 
