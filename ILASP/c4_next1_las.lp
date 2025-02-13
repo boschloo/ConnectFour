@@ -44,8 +44,7 @@ constant(c,0).
 constant(c,1).
 constant(c,2).
 
-#pos({next(control(1))},{next(control(2)), next(control(0))},
-{ control(2).}).
+#pos({next(control(1))},{next(control(2)), next(control(0))},{control(2).}).
 
 
 % (base) ~/connectfour/ILASP % ilasp --version=2i c4_v426_las.lp
