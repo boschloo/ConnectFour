@@ -48,5 +48,5 @@ show tests on different aspects of the program. These files are all ready to run
 | c4_test_v126.lp | goal/2, terminal/0.| Game board almost full, one move to make by player 2 |
 | c4_test_v127.lp | open/0, line/1, horz/3, vert/3, dia1/3, dia2/3, open/0, goal/2, terminal/0.| Game board full, no columns available, player 1 to go |
 | c4_test_v128.lp | open/0, line/1, horz/3, vert/3, dia1/3, dia2/3, open/0, goal/2, terminal/0.| Horizontal line of four for player 2. Goal, terminal |
-| c4_test_v129 | open/0, line/1, horz/3, vert/3, dia1/3, dia2/3, open/0, goal/2, terminal/0.| Two diagonal lines for player 2, player 2 wins with 100, open but terminal |
+| c4_test_v129.lp | open/0, line/1, horz/3, vert/3, dia1/3, dia2/3, open/0, goal/2, terminal/0.| Two diagonal lines for player 2, player 2 wins with 100, open but terminal |
 

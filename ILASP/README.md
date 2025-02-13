@@ -7,11 +7,11 @@ The resulting file is c4\_learned\_with\_ilasp\_las.lp. It is possible add test 
 
 | filename | learned | 
 |----------|---------|
-|  c4\_combi_las.lp | Based on invented disc positions, not on valid game states | 
-|  c4\_dia1_las.lp | dia1, diagonal line of four SW-NE, on invented positions| 
-|  c4\_dia2_las.lp | dia2, diagonal line of four NW-SW, on invented positions |
+|  c4\_combi_las.lp | Based on arbitrary disc positions, not on valid game states | 
+|  c4\_dia1_las.lp | dia1, diagonal line of four SW-NE, on arbitrary positions| 
+|  c4\_dia2_las.lp | dia2, diagonal line of four NW-SW, on arbitrary positions |
 |  c4\_goal_las.lp | goal |
-|  c4\_horz_las.lp | horizontal line of four W-E, on invented positions |
+|  c4\_horz_las.lp | horizontal line of four W-E, on arbitrary positions |
 |  c4\_legal_las.lp | legal |
 |  c4\_line_las.lp | based on valid game states, generated with the tool |
 |  c4\_next\_1_las.lp | next(control(P)) |
