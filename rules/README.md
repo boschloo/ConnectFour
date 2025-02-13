@@ -9,10 +9,10 @@ With the statements in this file, the true/1 state is the state immediately afte
 
  - File ASP/c4\_asp.lp
 The Connect-Four program we will use as a base for the rest of this research is shown as 
-File ASP/c4\_asp.lp.In this version, the rules for Initial state and Game state (c4\_gdl.lp |, line 14-20) are left out.
+File ASP/c4\_asp.lp.In this version, the rules for Initial state and Game state (c4\_gdl.lp, line 14-20) are left out.
 
 - File c4\_asp\_with\_state\_example.lp 
-shows a complete program with the actual game state given in lines 52-59. A game text scheme example is added as comments in lines 61-67. 
+shows a complete program with the actual game state given in lines 55-62. A game text scheme example is added as comments in lines 64-70. 
 
 - The test files in this directory
 show tests on different aspects of the program. These files are all ready to run with clingo. The test scenarios are in the first part of the file, the rest of the program is added. In testing the program, a number of mistakes were found and resolved, in particular concerning the terminal/0 predicate.
