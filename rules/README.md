@@ -1,17 +1,24 @@
-# ASP
-Started with writing an ASP-program to play Connect Four. 
-File ASP/c4_gdl.lp
+# Rules
+Started with writing an ASP-program to play Connect Four.
+ 
+- File ASP/c4_gdl.lp
+
 This program is built according to the GDL-standards. The input is a game state defined in true/1 statements. For each cell on the board, the occupation is given: true(cell(X,Y,P)), also the active player: true(control(P)).  Player P has a choice of possible actions from the legal moves. The program returns the new states of the game after these moves in next/1 predicates: next(cell(X,Y,P)), next(control(P)).
 
 With the statements in this file, the true/1 state is the state immediately after the initialisation of the game. For other moments in the game, it is necessary to give the game state as a series of facts for the 42 cells and the player in control. We chose to use the predicate cell(X,Y,P) instead of true(cell(X,Y,P)), and next(X,Y,P) instead of next(cell(X,Y,P)).  Also true(control(P)) is replaced by control(P).  We made these changes to keep the in- and output of the program a bit more compact. 
 
+ - File ASP/c4\_asp.lp
 The Connect-Four program we will use as a base for the rest of this research is shown as 
-File ASP/c4_asp.lp. In this version, the parts for Initial state and Game state (c4_gdl.lp |, line 14-20) are left out. File c4_asp_with_state_example.lp | shows a complete program with the actual game state given in lines 52-59. A game text scheme example is added as comments in lines 61-67. 
+File ASP/c4\_asp.lp.In this version, the rules for Initial state and Game state (c4\_gdl.lp |, line 14-20) are left out.
 
-The test files in the directory ASP show tests on different aspects of the program. These files are all ready to run with clingo. The test scenarios are in the first part of the file, the rest of the program is added at the end. In testing the program, a number of mistakes were found and resolved in the original program, in particular concerning the terminal/0 predicate.
+- File c4\_asp\_with\_state\_example.lp 
+shows a complete program with the actual game state given in lines 52-59. A game text scheme example is added as comments in lines 61-67. 
+
+- The test files in this directory
+show tests on different aspects of the program. These files are all ready to run with clingo. The test scenarios are in the first part of the file, the rest of the program is added. In testing the program, a number of mistakes were found and resolved, in particular concerning the terminal/0 predicate.
 
 
-| filename | tested | scenario |
+| filename | tests | scenario |
 |----------|--------|----------|
 | c4_test_v101.lp | board_size/2. | Initial |
 | c4_test_v102.lp | col/1, row/1, role/1. | Initial |
