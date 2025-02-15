@@ -7,7 +7,7 @@ The directory [rules](./rules/) contains the Connect Four program as written at 
 
 In the directory [strategies](./strategies/), work has been started on programming and testing winning strategies.
  
-The directory [ILASP](./ILASP/) contains the files used with ILASP to learn the rule of Connect Four. 
+The directory [ILASP](./ILASP/) contains the files used with ILASP to learn the rule of Connect Four. The resulting program as learned is [c4\_learned\_with\_ilasp.lp](./c4_learned_with_ilasp.lp)
 
 The directory [game](./game/) containts a web app to be used as a tool for playing Connect Four and generating test scenarios. The web app can be used at [Connect Four Tool](https://kladblok.app)
 
