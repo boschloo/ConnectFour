@@ -13,6 +13,7 @@ __pycache__/
 
 # VS Code editor instellingen
 .vscode/
+.code-workspace
 
 # Logs en tijdelijke bestanden
 *.log
@@ -24,3 +25,4 @@ __pycache__/
 *.class
 *.exe
 
+.gitignore
