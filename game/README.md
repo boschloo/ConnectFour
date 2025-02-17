@@ -3,7 +3,7 @@ A web app  - constructed with lots of help from ChatGPT - useful for playing Con
 
 The web app consists of an index.html file, with css styling and a Javascript program.
 
-- Moves can be made by clicking on a column or entering a charachter A-G in the first input window.
+- Moves can be made by clicking on a column or entering a character A-G in the first input window.
 - A move can be withdrawn by typing a minus sign.
 - The active player is shown below the input window (still with errors!)
 - The _Reset Game_ button restart the game without reloading the page.
