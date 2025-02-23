@@ -1,4 +1,3 @@
-```asp
 % c4_asp_with_state_example.lp
 % ASP-code for playing Connect Four.
 % Version to be used in the learning process
@@ -83,4 +82,3 @@ control(1).
 % #show open/0.
 % #show terminal/0.
 % #show goal/2.
-```
