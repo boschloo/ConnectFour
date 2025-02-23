@@ -11,4 +11,4 @@ The directory [ILASP](./ILASP/) contains the files used with ILASP to learn the 
 
 The directory [game](./game/) contains a web app to be used as a tool for playing Connect Four and generating test scenarios. The web app can be used at [Connect Four Tool](https://kladblok.app)
 
-A README.md file in each directory gives more context.
+In the directory [clinguin](./clinguin/) a first try in visualisation with Clinguin, a recent tool from Potassco.

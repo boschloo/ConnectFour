@@ -1,5 +1,5 @@
 # Visualisation with Clinguin
-Clinguin is a recent tool available from the Potassco program suite. Its purpose is interactive visualisation for answer set programming. This is my first try in using it for Connect Four.
+Clinguin is a recent tool available from the Potassco program suite. Its purpose is interactive enduser-friendly visualisation for answer set programming. This is my first try in using it for Connect Four.
 
 Clinguin needs to be installed on your system.
 
