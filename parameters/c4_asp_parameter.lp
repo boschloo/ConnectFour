@@ -1,10 +1,12 @@
 % c4_asp_parameter.lp
 % ASP-code for playing Connect Four - Parameter 'order' 
 % 
+#const k=4.
 
 % Background knowledge -------------------------------------------------------
-order(4).  % Number of discs on a row necessary to win
+order(k).  % Number of discs on a row necessary to win
 board_size(7,6).
+
 col(X) :- X = 1..M, board_size(M,N).
 row(Y) :- Y = 1..N, board_size(M,N).
 
@@ -12,7 +14,7 @@ row(Y) :- Y = 1..N, board_size(M,N).
 role(1). role(2).
 
 % Legal moves: Actions --------------------------------------------------------------
-legal(P, drop(X)) :- control(P), open(X).
+legal(P, drop(X)) :- control(P), open(X), not terminal.
 
 % Moves: Action selection -----------------------------------------------------------
 % {does(X, A): legal(X, A)} = 1 :- not terminal. 
@@ -39,30 +41,25 @@ terminal :- not open.
 open(X) :- cell(X, N, 0), board_size(M, N).
 open :- open(X).
 
-horz_num(X,Y,P,1) :- role(P), cell(X,Y,P).
-vert_num(X,Y,P,1) :- role(P), cell(X,Y,P).
-dia1_num(X,Y,P,1) :- role(P), cell(X,Y,P).
-dia2_num(X,Y,P,1) :- role(P), cell(X,Y,P).
+horz_num(X,Y,P,1) :- cell(X,Y,P).
+vert_num(X,Y,P,1) :- cell(X,Y,P).
+dia1_num(X,Y,P,1) :- cell(X,Y,P).
+dia2_num(X,Y,P,1) :- cell(X,Y,P).
 
 horz_num(X+1,Y,P,N+1) :- horz_num(X,Y,P,N), cell(X+1,Y,P).
 vert_num(X,Y+1,P,N+1) :- vert_num(X,Y,P,N), cell(X,Y+1,P).
 dia1_num(X+1,Y+1,P,N+1) :- dia1_num(X,Y,P,N), cell(X+1,Y+1,P).
 dia2_num(X+1,Y-1,P,N+1) :- dia2_num(X,Y,P,N), cell(X+1,Y-1,P).
 
-longest_horz(P,0) :- role(P), not horz_num(_,_,P,_).
-longest_vert(P,0) :- role(P), not vert_num(_,_,P,_).
-longest_dia1(P,0) :- role(P), not dia1_num(_,_,P,_).
-longest_dia2(P,0) :- role(P), not dia2_num(_,_,P,_).
+horz(X,Y,P) :- horz_num(X,Y,P,k).
+vert(X,Y,P) :- vert_num(X,Y,P,k).
+dia1(X,Y,P) :- dia1_num(X,Y,P,k).
+dia2(X,Y,P) :- dia2_num(X,Y,P,k).
 
-longest_horz(P,M) :- horz_num(X,Y,P,M), not horz_num(_,_,P,M+1).
-longest_vert(P,M) :- vert_num(X,Y,P,M), not vert_num(_,_,P,M+1).
-longest_dia1(P,M) :- dia1_num(X,Y,P,M), not dia1_num(_,_,P,M+1).
-longest_dia2(P,M) :- dia2_num(X,Y,P,M), not dia2_num(_,_,P,M+1).
-
-line(P) :- longest_horz(P,K), order(K).
-line(P) :- longest_vert(P,K), order(K).
-line(P) :- longest_dia1(P,K), order(K).
-line(P) :- longest_dia2(P,K), order(K).
+line(P) :- horz(X,Y,P). 
+line(P) :- vert(X,Y,P). 
+line(P) :- dia1(X,Y,P). 
+line(P) :- dia2(X,Y,P).
 
 % Game status --------------------------------------------------------------------------
 cell(1,6,0). cell(2,6,0). cell(3,6,0). cell(4,6,1). cell(5,6,0). cell(6,6,0). cell(7,6,0).
@@ -81,22 +78,21 @@ control(1).
 % . . . 2 . . 1
 
 % #show horz_num/4.
-#show longest_horz/2.
-#show longest_vert/2.
-#show longest_dia1/2.
-#show longest_dia2/2.
 #show line/1.
+#show horz/3.
+#show vert/3.
+#show dia1/3.
+#show dia2/3.
 
 % clingo version 5.4.0
-% Reading from /Users/boschloo/c4/c4_asp_nmk.lp
+% Reading from /Users/boschloo/c4/c4_asp_parameter.lp
 % Solving...
 % Answer: 1
-% line(2) line(1) longest_dia1(2,1) longest_dia1(1,2) longest_dia2(2,4) longest_dia2(1,4) 
-%                 longest_horz(2,2) longest_horz(1,2) longest_vert(2,2) longest_vert(1,2)
+% line(1) line(2) dia2(7,1,1) dia2(7,2,2)
 % SATISFIABLE
 
 % Models       : 1
 % Calls        : 1
-% Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+% Time         : 0.010s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 % CPU Time     : 0.004s
 
