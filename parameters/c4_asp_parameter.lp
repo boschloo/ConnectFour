@@ -1,6 +1,7 @@
 % c4_asp_parameter.lp
 % ASP-code for playing Connect Four - Parameter 'order' 
-% 
+% Last change: l.50-53, X-1 gives the lines in the right direction
+ 
 #const k=4.
 
 % Background knowledge -------------------------------------------------------
@@ -46,10 +47,10 @@ vert_num(X,Y,P,1) :- cell(X,Y,P).
 dia1_num(X,Y,P,1) :- cell(X,Y,P).
 dia2_num(X,Y,P,1) :- cell(X,Y,P).
 
-horz_num(X+1,Y,P,N+1) :- horz_num(X,Y,P,N), cell(X+1,Y,P).
-vert_num(X,Y+1,P,N+1) :- vert_num(X,Y,P,N), cell(X,Y+1,P).
-dia1_num(X+1,Y+1,P,N+1) :- dia1_num(X,Y,P,N), cell(X+1,Y+1,P).
-dia2_num(X+1,Y-1,P,N+1) :- dia2_num(X,Y,P,N), cell(X+1,Y-1,P).
+horz_num(X-1,Y,P,N+1) :- horz_num(X,Y,P,N), cell(X-1,Y,P).
+vert_num(X,Y-1,P,N+1) :- vert_num(X,Y,P,N), cell(X,Y-1,P).
+dia1_num(X-1,Y+1,P,N+1) :- dia1_num(X,Y,P,N), cell(X-1,Y+1,P).
+dia2_num(X-1,Y-1,P,N+1) :- dia2_num(X,Y,P,N), cell(X-1,Y-1,P).
 
 horz(X,Y,P) :- horz_num(X,Y,P,k).
 vert(X,Y,P) :- vert_num(X,Y,P,k).
@@ -62,20 +63,21 @@ line(P) :- dia1(X,Y,P).
 line(P) :- dia2(X,Y,P).
 
 % Game status --------------------------------------------------------------------------
-cell(1,6,0). cell(2,6,0). cell(3,6,0). cell(4,6,1). cell(5,6,0). cell(6,6,0). cell(7,6,0).
-cell(1,5,2). cell(2,5,1). cell(3,5,0). cell(4,5,2). cell(5,5,0). cell(6,5,0). cell(7,5,0).
-cell(1,4,2). cell(2,4,0). cell(3,4,1). cell(4,4,1). cell(5,4,2). cell(6,4,1). cell(7,4,0).
-cell(1,3,0). cell(2,3,2). cell(3,3,2). cell(4,3,0). cell(5,3,1). cell(6,3,2). cell(7,3,1).
-cell(1,2,0). cell(2,2,0). cell(3,2,0). cell(4,2,2). cell(5,2,1). cell(6,2,1). cell(7,2,2).
-cell(1,1,0). cell(2,1,0). cell(3,1,0). cell(4,1,2). cell(5,1,0). cell(6,1,0). cell(7,1,1).
+cell(1,6,0). cell(2,6,0). cell(3,6,0). cell(4,6,1). cell(5,6,2). cell(6,6,0). cell(7,6,0).
+cell(1,5,0). cell(2,5,0). cell(3,5,0). cell(4,5,2). cell(5,5,0). cell(6,5,1). cell(7,5,2).
+cell(1,4,0). cell(2,4,1). cell(3,4,2). cell(4,4,1). cell(5,4,1). cell(6,4,0). cell(7,4,2).
+cell(1,3,1). cell(2,3,2). cell(3,3,1). cell(4,3,0). cell(5,3,2). cell(6,3,2). cell(7,3,0).
+cell(1,2,1). cell(2,2,1). cell(3,2,1). cell(4,2,2). cell(5,2,0). cell(6,2,0). cell(7,2,0).
+cell(1,1,1). cell(2,1,0). cell(3,1,0). cell(4,1,2). cell(5,1,0). cell(6,1,0). cell(7,1,0).
+
 control(1).
 
-% . . . 1 . . .
-% 2 1 . 2 . . .
-% 2 . 1 1 2 1 .
-% . 2 2 . 1 2 1
-% . . . 2 1 1 2
-% . . . 2 . . 1
+% . . . 1 2 . .
+% . . . 2 . 1 2
+% . 1 2 1 1 . 2
+% 1 2 1 . 2 2 .
+% 1 1 1 2 . . .
+% 1 . . 2 . . .
 
 % #show horz_num/4.
 #show line/1.
@@ -85,14 +87,15 @@ control(1).
 #show dia2/3.
 
 % clingo version 5.4.0
-% Reading from /Users/boschloo/c4/c4_asp_parameter.lp
+% Reading from ...rs/boschloo/c4/c4_asp_parameter_v02.lp
 % Solving...
 % Answer: 1
-% line(1) line(2) dia2(7,1,1) dia2(7,2,2)
+% line(1) line(2) dia2(1,1,1) dia2(2,3,2)
 % SATISFIABLE
 
 % Models       : 1
 % Calls        : 1
-% Time         : 0.010s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+% Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 % CPU Time     : 0.004s
+
 
