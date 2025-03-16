@@ -39,8 +39,6 @@ maxv(2).
 % ===================================================================================
 % Result:
 %:~ does(V3,drop(V2)), winning_move(V1,V2), opponent(V3,V1).[10@2, V1, V2, V3]
-% ofwel
-% :~ does(P,drop(X)), winning_move(O,X), opponent(P,O).[10@1, V1, V2, V3]
 %
 % Dit is de regel die ervoor zorgt dat de tegenstander geblokt wordt.
 

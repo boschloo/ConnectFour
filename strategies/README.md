@@ -1,6 +1,6 @@
 # Strategies
 
-**Learning Weak Constraints**
+**Defining strategies**
 
 With the learned and tested program as a basis, it should be possible to learn a strategy for game play as well. A strategy in general should yield a preference for a move, a choice given the possible moves a player can make.
 
@@ -57,3 +57,13 @@ Same situation as v501 but with player 2 in control.
 
 
 === The tests suggest that the program is working as expected ===
+
+**Learning strategies**
+
+*c4_v511_las.lp*
+Tried to construct a mode bias and an example for ILASP to learn preferred strategies. 
+
+With only one input item, I get a result and so many questions:
+
+- How is it that this simple example gives a result that is just not what I expected?? Strategy #2 instead of #1, and with a positive number where I had to use a negative value to get meaningful results? [10@2] instead of [-10@1]?
+- Where to find a clear explanation of brave\_ordering and cautious\_ordering. And how do I give meaningful examples for ILASP to learn from?
