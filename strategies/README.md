@@ -18,7 +18,8 @@ For example, a strategy might be the following. When there are three disks of th
 
 **Testing strategies**
 
-The rules in these files are the same, but with different game states. The purpose is to test a combination of strategies.
+These files observe different game states. The purpose is to test a combination of strategies. 
+The first 60 lines of these programs contain the game state to be tested, the strategies and the output obtained. The program part starting at line 60 is always the same.
 
 Three strategies are given in order: 
 
@@ -47,3 +48,5 @@ No winning move, no direct threats: strategy 3. Just one possible column.
 *c4_v505.lp*
 
 No winning move, no direct threats, center columns full: strategy 4. 
+
+=== The tests suggest that the program is working as expected ===
