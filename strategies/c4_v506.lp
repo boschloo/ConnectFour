@@ -12,6 +12,13 @@ cell(1,2,0). cell(2,2,0). cell(3,2,1). cell(4,2,1). cell(5,2,1). cell(6,2,0). ce
 cell(1,1,0). cell(2,1,0). cell(3,1,2). cell(4,1,2). cell(5,1,1). cell(6,1,0). cell(7,1,0).
 control(1).
 
+% . . 1 2 1 . .
+% . . 2 2 1 . .
+% . . 2 1 2 . .
+% . . 2 1 2 . .
+% . . 1 1 1 . .
+% . . 2 2 1 . .
+
 % % Strategies: 1. Win 2. Block opponent 3. Center columns
 :~ does(P, drop(X)), winning_move(P, X). [-50@1]  
 :~ does(P, drop(X)), winning_move(O, X), opponent(P, O). [-10@1] 
@@ -25,7 +32,7 @@ control(1).
 % 2. block: -
 % 3. center columns: -
 % 4. Any other move
-% QUESTION: What if there are three disks on a line, without a direct win?
+% QUESTION: There are three disks in line 2 without a direct win. What happens?
 
 % Expected --------------------------------------------------------------------- 
 % Four models, columns 1,2,6,7.

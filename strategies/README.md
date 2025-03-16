@@ -49,4 +49,11 @@ No winning move, no direct threats: strategy 3. Just one possible column.
 
 No winning move, no direct threats, center columns full: strategy 4. 
 
+*c4_v506.lp*
+What happens with three disks in a line where the threath cannot be reached. In this example there are three disks in line 2 without a direct win. What happens?
+
+*c4_v507.lp*
+Same situation as v501 but with player 2 in control.
+
+
 === The tests suggest that the program is working as expected ===
