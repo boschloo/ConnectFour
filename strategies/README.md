@@ -63,7 +63,7 @@ Same situation as v501 but with player 2 in control.
 *c4_v511_las.lp*
 Tried to construct a mode bias and an example for ILASP to learn preferred strategies. 
 
-With only one input item, I get a result and so many questions:
+With only two input items (lines 30-32), I get a result (line 41) and so many questions:
 
 - How is it that this simple example gives a result that is just not what I expected?? Strategy #2 instead of #1, and with a positive number where I had to use a negative value to get meaningful results? [10@2] instead of [-10@1]?
-- Where to find a clear explanation of brave\_ordering and cautious\_ordering. And how do I give meaningful examples for ILASP to learn from?
+- Where do I find a clear explanation of brave\_ordering and cautious\_ordering. And how do I give meaningful examples for ILASP to learn from?
