@@ -30,7 +30,7 @@ elem(window, window, root).
         when(col_btn(C), click, call, download()) :- col(C). 
 
         elem(board_cell(C,R),button,window):-board_cell(C,R).
-            attr(board_cell(C,R),width,50):-board_cell(C,R).
+        attr(board_cell(C,R),width,50):-board_cell(C,R).
         attr(board_cell(C,R),height,50):-board_cell(C,R).
         attr(board_cell(C,R),grid_column,C):-board_cell(C,R).
         attr(board_cell(C,R),grid_row,9-(R+1)):-board_cell(C,R).
@@ -38,7 +38,12 @@ elem(window, window, root).
         attr(board_cell(C,R), class, ("btn-info")):- next(C,R,P), P = 0.
         attr(board_cell(C,R), class, ("btn-warning")):- next(C,R,P), P = 1.
         attr(board_cell(C,R), class, ("btn-danger")):- next(C,R,P), P = 2.
-        when(board_cell(C,R), click, call, add_assumption(does(P,drop(C)),true)):- _any(cell(C,R,_)), control(P).
+        when(board_cell(C,R), click, call, add_atom(does(P,drop(C)))):- _any(cell(C,R,_)), control(P).     
+
+    elem(button1, button, window).
+    attr(button1, width,50).
+    attr(button1, height, 50).
+    when(button1, click, call, download()).
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % Menu bar

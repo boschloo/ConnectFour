@@ -1,6 +1,6 @@
 % c4_asp_parameter.lp
 % ASP-code for playing Connect Four - Parameter 'order' 
-% Last change: l.50-53, X-1 gives the lines in the right direction
+% Last change: l.50-53, X-1 gives the lines in the right direction. l.55-58: role(P), ignores empty cells.
  
 #const k=4.
 
@@ -52,10 +52,10 @@ vert_num(X,Y-1,P,N+1) :- vert_num(X,Y,P,N), cell(X,Y-1,P).
 dia1_num(X-1,Y+1,P,N+1) :- dia1_num(X,Y,P,N), cell(X-1,Y+1,P).
 dia2_num(X-1,Y-1,P,N+1) :- dia2_num(X,Y,P,N), cell(X-1,Y-1,P).
 
-horz(X,Y,P) :- horz_num(X,Y,P,k).
-vert(X,Y,P) :- vert_num(X,Y,P,k).
-dia1(X,Y,P) :- dia1_num(X,Y,P,k).
-dia2(X,Y,P) :- dia2_num(X,Y,P,k).
+horz(X,Y,P) :- horz_num(X,Y,P,k), role(P). 
+vert(X,Y,P) :- vert_num(X,Y,P,k), role(P).
+dia1(X,Y,P) :- dia1_num(X,Y,P,k), role(P).
+dia2(X,Y,P) :- dia2_num(X,Y,P,k), role(P).
 
 line(P) :- horz(X,Y,P). 
 line(P) :- vert(X,Y,P). 

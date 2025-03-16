@@ -161,18 +161,46 @@
 % 2 2 1 1 2 1 1
 % 2 1 2 2 2 1 1
 
-% % Game state ------DIAGONAL2 2 ----- TODO!----------------------------------------------
+% % Game state ------DIAGONAL2 2 ---------------------------------------------------------
+% cell(1,6,0). cell(2,6,0). cell(3,6,0). cell(4,6,0). cell(5,6,0). cell(6,6,0). cell(7,6,2).
+% cell(1,5,1). cell(2,5,0). cell(3,5,2). cell(4,5,0). cell(5,5,0). cell(6,5,0). cell(7,5,2).
+% cell(1,4,1). cell(2,4,2). cell(3,4,1). cell(4,4,1). cell(5,4,0). cell(6,4,2). cell(7,4,2).
+% cell(1,3,2). cell(2,3,1). cell(3,3,2). cell(4,3,2). cell(5,3,0). cell(6,3,1). cell(7,3,1).
+% cell(1,2,2). cell(2,2,2). cell(3,2,1). cell(4,2,1). cell(5,2,2). cell(6,2,1). cell(7,2,1).
+% cell(1,1,2). cell(2,1,1). cell(3,1,2). cell(4,1,2). cell(5,1,2). cell(6,1,1). cell(7,1,1).
+% control(1).
 
-% % Game state ------DIAGONAL2 3 ----- TODO! ---------------------------------------------
+% . . . . . . 2
+% 1 . 2 . . . 2
+% 1 2 1 1 . 2 2
+% 2 1 2 2 . 1 1
+% 2 2 1 1 2 1 1
+% 2 1 2 2 2 1 1
+
+% % Game state ------DIAGONAL2 3 --------------------------------------------------------
+% cell(1,6,0). cell(2,6,0). cell(3,6,0). cell(4,6,0). cell(5,6,0). cell(6,6,0). cell(7,6,2).
+% cell(1,5,1). cell(2,5,1). cell(3,5,2). cell(4,5,0). cell(5,5,0). cell(6,5,0). cell(7,5,2).
+% cell(1,4,1). cell(2,4,2). cell(3,4,1). cell(4,4,1). cell(5,4,1). cell(6,4,0). cell(7,4,2).
+% cell(1,3,2). cell(2,3,1). cell(3,3,2). cell(4,3,2). cell(5,3,1). cell(6,3,0). cell(7,3,1).
+% cell(1,2,2). cell(2,2,2). cell(3,2,1). cell(4,2,1). cell(5,2,2). cell(6,2,0). cell(7,2,1).
+% cell(1,1,2). cell(2,1,1). cell(3,1,2). cell(4,1,2). cell(5,1,2). cell(6,1,1). cell(7,1,1).
+% control(1).
+
+% . . . . . . 2
+% 1 1 2 . . . 2
+% 1 2 1 1 1 . 2
+% 2 1 2 2 1 . 1
+% 2 2 1 1 2 . 1
+% 2 1 2 2 2 1 1
 
 % % Game state ------DIAGONAL2 4 ---------------------------------------------------------
-cell(1,6,0). cell(2,6,0). cell(3,6,0). cell(4,6,0). cell(5,6,0). cell(6,6,0). cell(7,6,0).
-cell(1,5,1). cell(2,5,0). cell(3,5,2). cell(4,5,0). cell(5,5,0). cell(6,5,0). cell(7,5,0).
-cell(1,4,1). cell(2,4,2). cell(3,4,1). cell(4,4,1). cell(5,4,1). cell(6,4,2). cell(7,4,0).
-cell(1,3,2). cell(2,3,1). cell(3,3,2). cell(4,3,2). cell(5,3,1). cell(6,3,1). cell(7,3,0).
-cell(1,2,2). cell(2,2,2). cell(3,2,1). cell(4,2,1). cell(5,2,2). cell(6,2,1). cell(7,2,0).
-cell(1,1,2). cell(2,1,1). cell(3,1,2). cell(4,1,2). cell(5,1,2). cell(6,1,1). cell(7,1,0).
-control(1).
+% cell(1,6,0). cell(2,6,0). cell(3,6,0). cell(4,6,0). cell(5,6,0). cell(6,6,0). cell(7,6,0).
+% cell(1,5,1). cell(2,5,0). cell(3,5,2). cell(4,5,0). cell(5,5,0). cell(6,5,0). cell(7,5,0).
+% cell(1,4,1). cell(2,4,2). cell(3,4,1). cell(4,4,1). cell(5,4,1). cell(6,4,2). cell(7,4,0).
+% cell(1,3,2). cell(2,3,1). cell(3,3,2). cell(4,3,2). cell(5,3,1). cell(6,3,1). cell(7,3,0).
+% cell(1,2,2). cell(2,2,2). cell(3,2,1). cell(4,2,1). cell(5,2,2). cell(6,2,1). cell(7,2,0).
+% cell(1,1,2). cell(2,1,1). cell(3,1,2). cell(4,1,2). cell(5,1,2). cell(6,1,1). cell(7,1,0).
+% control(1).
 
 % . . . . . . .
 % 1 . 2 . . . .
@@ -183,7 +211,7 @@ control(1).
 
 % Strategies -----------------------------------------------------------------------
 % Vertical
-winning_move(P, X) :- cell(X,Y,P), cell(X,Y+1,P), cell(X,Y+2,P), cell(X,Y+3,0), role(P), does(P,drop(X)). % Just one option
+winning_move(P, X) :- cell(X,Y,P), cell(X,Y+1,P), cell(X,Y+2,P), cell(X,Y+3,0), role(P). % Just one option
 
 % Horizontal
 winning_move(P, X) :- cell(X,Y,0), cell(X+1,Y,P), cell(X+2,Y,P), cell(X+3,Y,P), role(P), target(X,Y,P). % .ooo
@@ -204,10 +232,8 @@ winning_move(P, X) :- cell(X-2,Y+2,P), cell(X-1,Y+1,P),  cell(X,Y,0),     cell(X
 winning_move(P, X) :- cell(X-3,Y+3,P), cell(X-2,Y+2,P),  cell(X-1,Y+1,P), cell(X,Y,0), role(P), target(X,Y,P). 
 
 :~ does(P, drop(X)), winning_move(P, X). [-10@1]                 % Winning move
-#show next/3.
-% #show cell/3.
-% #show does/2.
-% #show winning_move/2.
+
+#show does/2.
 
 % ======= P R O G R A M ====== 2025-02-11 ============================================
 board_size(7,6).
@@ -221,7 +247,7 @@ role(1). role(2).
 legal(P, drop(X)) :- control(P), open(X), not terminal.
 
 % Moves: Action selection -----------------------------------------------------------
-{does(X, A): legal(X, A)} = 1 :- not terminal. 
+{does(X, A): legal(X, A)} = 1 :- not terminal.
 
 % Game state update  --------------------------------------------------------- 
 target(X,Y,P) :- does(P, drop(X)), cell(X,Y,0), not cell(X,Y-1,0).
